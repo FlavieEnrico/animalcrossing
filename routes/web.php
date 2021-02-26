@@ -18,5 +18,16 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/animalcrossing/fish', function() {
+    return view('ac');
+ });
+
 Route::get('/animalcrossing/fish', [ACController::class, 'fish']);
 Route::get('/animalcrossing/fish/{name}', [ACController::class, 'fishUnit']);
+
+Route::get('/animalcrossing/sea', [ACController::class, 'sea']);
+Route::get('/animalcrossing/sea/{name}', [ACController::class, 'seaUnit']);
+
+Route::get('/animalcrossing/bugs', [ACController::class, 'bugs']);
+Route::get('/animalcrossing/bugs/{name}', [ACController::class, 'bugsUnit']);
+
