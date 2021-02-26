@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ACController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +18,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/cars/{name}', function ($name) {
-    echo($name);
-});
+Route::get('/animalcrossing/fish', [ACController::class, 'fish']);
+Route::get('/animalcrossing/fish/{name}', [ACController::class, 'fishUnit']);
