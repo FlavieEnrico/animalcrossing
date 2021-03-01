@@ -5,7 +5,7 @@
     <li>Rarity: {{ $row->availability->rarity }}</li>
     <li>Size: {{ $row->shadow }}</li>
     <li>Price: {{ $row->price}}</li>
-    <li>Price if bought by CJ: {{$row->{'price-cj'}}}</li>
+    <li> CJ Price: {{$row->{'price-cj'}}}</li>
     <li> Catchphrase: {{$row->{'catch-phrase'}}}</li>
     
 </ul>

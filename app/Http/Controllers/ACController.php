@@ -30,7 +30,7 @@ class ACController extends Controller
         if ($err) {
         echo "cURL Error #:" . $err;
         } else {
-        return view('fish', [
+        return view('preview', [
         'response'=>$response]
         );
         }
@@ -59,8 +59,8 @@ curl_close($curl);
 if ($err) {
   echo "cURL Error #:" . $err;
 } else {
-    return view ('');
-
+  return view('fishUnit', [
+    'response'=>$response]);
 }
     }
     public function sea() {
@@ -81,6 +81,7 @@ curl_setopt_array($curl, [
 ]);
 
 $response = curl_exec($curl);
+$response=json_decode($response);
 $err = curl_error($curl);
 
 curl_close($curl);
@@ -88,7 +89,9 @@ curl_close($curl);
 if ($err) {
   echo "cURL Error #:" . $err;
 } else {
-  echo $response;
+  return view('preview', [
+    'response'=>$response]
+    );
 }
     }
     public function seaUnit($name) {
@@ -109,6 +112,7 @@ if ($err) {
         ]);
         
         $response = curl_exec($curl);
+        $response=json_decode($response);
         $err = curl_error($curl);
         
         curl_close($curl);
@@ -137,6 +141,7 @@ if ($err) {
         ]);
         
         $response = curl_exec($curl);
+        $response=json_decode($response);
         $err = curl_error($curl);
         
         curl_close($curl);
@@ -144,7 +149,9 @@ if ($err) {
         if ($err) {
           echo "cURL Error #:" . $err;
         } else {
-          echo $response;
+          return view('preview', [
+            'response'=>$response]
+            );
         }
     }
     public function bugsUnit($name) {
@@ -165,6 +172,7 @@ if ($err) {
         ]);
         
         $response = curl_exec($curl);
+        $response=json_decode($response);
         $err = curl_error($curl);
         
         curl_close($curl);
@@ -172,7 +180,8 @@ if ($err) {
         if ($err) {
           echo "cURL Error #:" . $err;
         } else {
-          echo $response;
+          return view('bugsUnit', [
+            'response'=>$response]);
         }
     }
 }
