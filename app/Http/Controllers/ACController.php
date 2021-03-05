@@ -51,7 +51,6 @@ curl_setopt_array($curl, [
 ]);
 
 $response = curl_exec($curl);
-$response=json_decode($response);
 $err = curl_error($curl);
 
 curl_close($curl);
@@ -59,8 +58,7 @@ curl_close($curl);
 if ($err) {
   echo "cURL Error #:" . $err;
 } else {
-  return view('fishUnit', [
-    'response'=>$response]);
+ echo $response;
 }
     }
     public function sea() {
