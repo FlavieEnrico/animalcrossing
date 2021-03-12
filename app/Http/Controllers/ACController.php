@@ -186,4 +186,7 @@ if ($err) {
             'response'=>$response]);
         }
     }
+    public function crittersOfTheMonth() {
+      return view('ac');
+    }
 }

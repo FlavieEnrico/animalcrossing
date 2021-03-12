@@ -18,9 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/animalcrossing', function() {
-    return view('ac');
- });
+Route::get('/animalcrossing', [ACController::class, 'crittersOfTheMonth']);
 
 Route::get('/animalcrossing/fish', [ACController::class, 'fish']);
 Route::get('/animalcrossing/fish/{name}', [ACController::class, 'fishUnit']);

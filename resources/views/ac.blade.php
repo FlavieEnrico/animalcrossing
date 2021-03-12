@@ -1,7 +1,13 @@
-@extends('layout.head')
-@section('content')
+<?php 
+$month = date("F");   
+?>
 <head>
-<link href="{{ asset('/css/app.css') }}" rel="stylesheet">
+  <meta charset="utf-8">
+  <title>ACNH Critterpedia</title>
+  <link rel="icon" href="https://acnhapi.com/v1/icons/bugs/1" />
+  <link href="{{ asset('/css/reset.css') }}" rel="stylesheet">
+  <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
+  <link href="{{ asset('/css/switch.css') }}" rel="stylesheet">
 </head>
 <div>
 <h1><a>ACNH Critterpedia</a></h1>
@@ -11,7 +17,15 @@
     <a href="bugs/">Bugs</a>
 </nav>
 </div>
+<body>
 <div>
-<h2>Critters of the month : </h2>
+<h2>Critters of the month: <em><?php echo $month; ?></em></h2>
+<span class="switch">
+        <p>Northern hemisphere</p>
+        <input id="cmn-toggle-1" class="cmn-toggle cmn-toggle-round"  type="checkbox">
+        <label for="cmn-toggle-1"></label>
+        <p>Southern hemisphere</p>
+</span>
+<p id="selected"></p>
 </div>
-@section ('content')
+</body>

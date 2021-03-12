@@ -1,14 +1,6 @@
 @extends('layout.head')
 @section('content')
 <div>
-<h1><a href="../">ACNH Critterpedia</a></h1>
-<nav>
-    <a href="../fish/">Fish</a>
-    <a href="../sea/">Sea Creatures</a>
-    <a href="../bugs/">Bugs</a>
-</nav>
-</div>
-<div>
 @foreach ($response as $row)
 <?php 
 $replaced = Str::of($row->{'file-name'})->replace('_', ' ');
