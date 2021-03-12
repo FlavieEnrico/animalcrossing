@@ -18,7 +18,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/animalcrossing/fish', function() {
+Route::get('/animalcrossing', function() {
     return view('ac');
  });
 
