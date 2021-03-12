@@ -17,9 +17,8 @@ $converted = Str::of($replaced)->title();
 <a href=".">◄</a>
 <ul>
     <li><h2><?php echo $converted; ?></h2></li>
-    <li>Location: {{ $row->availability->location }}</li>
-    <li>Rarity: {{ $row->availability->rarity }}</li>
-    <li>Size: {{ $row->shadow }}</li>
+    <li>Shadow: {{ $row->shadow }}</li>
+    <li>Speed: {{ $row->speed }}</li>
     <li>Availability:
          <?php 
           $month = [1 => "January", 
@@ -50,7 +49,6 @@ $converted = Str::of($replaced)->title();
          ?>
     </li>
     <li>Price: {{ $row->price}} bells</li>
-    <li> CJ Price: {{$row->{'price-cj'} }} bells</li>
     <li> Catchphrase: {{$row->{'catch-phrase'} }}</li>
 </ul>
 <img src="{{ $row->image_uri }}" height="300px" alt="{{ $row->{'file-name'} }}">

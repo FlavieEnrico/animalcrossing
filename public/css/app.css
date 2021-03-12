@@ -59,6 +59,22 @@ body >div:nth-of-type(2) {
     box-shadow: 0px 0px 10px lightgrey;
 }
 
+body >div:nth-of-type(2) > a {
+    color: black;
+    text-decoration: none;
+    font-size: 30pt;
+    height:50px;
+    transition: all 1s;
+
+}
+body >div:nth-of-type(2) > a:hover {
+    color:lightgrey;
+}
+
+body >div:nth-of-type(2) > ul {
+    width : 40%;
+}
+
 body > div:nth-of-type(2) > div {
     width:17%; 
     margin-left: 20px;

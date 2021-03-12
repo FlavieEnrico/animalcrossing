@@ -1,3 +1,5 @@
+@extends('layout.head')
+@section('content')
 <head>
 <link href="{{ asset('/css/app.css') }}" rel="stylesheet">
 </head>
@@ -12,3 +14,4 @@
 <div>
 <h2>Critters of the month : </h2>
 </div>
+@section ('content')

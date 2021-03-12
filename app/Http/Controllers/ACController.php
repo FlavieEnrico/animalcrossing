@@ -121,7 +121,8 @@ if ($err) {
         if ($err) {
           echo "cURL Error #:" . $err;
         } else {
-          echo $response;
+          return view('seaUnit', [
+            'response'=>$response]);
         }
     }
     public function bugs() {

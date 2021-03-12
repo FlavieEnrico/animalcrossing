@@ -1,6 +1,5 @@
-<head>
-<link href="{{ asset('/css/app.css') }}" rel="stylesheet">
-</head>
+@extends('layout.head')
+@section('content')
 <div>
 <h1><a href="../">ACNH Critterpedia</a></h1>
 <nav>
@@ -25,3 +24,4 @@ $converted = Str::of($replaced)->title();
 </div>
 @endforeach
 </div>
+@endsection
