@@ -13,14 +13,14 @@
 @foreach ($response as $row)
 <?php 
 $replaced = Str::of($row->{'file-name'})->replace('_', ' ');
-$string = Str::of($replaced)->ucfirst();
+$converted = Str::of($replaced)->title();
 ?>
 <div>
     <div>
     <a href="{{ $row->{'file-name'} }}"><img src="{{ $row->icon_uri }}" alt="{{ $row->{'file-name'} }}"></a>
 </div>
 <p>
-<a href="{{ $row->{'file-name'} }}"><?php echo $string;?></a>
+<a href="{{ $row->{'file-name'} }}"><?php echo $converted;?></a>
 </p>
 </div>
 @endforeach
