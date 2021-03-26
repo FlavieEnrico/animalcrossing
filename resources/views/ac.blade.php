@@ -26,6 +26,9 @@ $month = date("F");
         <label for="cmn-toggle-1"></label>
         <p>Southern hemisphere</p>
 </span>
-<p id="selected"></p>
 </div>
+  <footer>
+    <p> Made by Flavie Enrico - API by ACNHAPI</p>
+  </footer>
 </body>
+</html>

@@ -17,5 +17,8 @@
 </div>
 <body>
     @yield('content')
+    <footer>
+    <p> Made by Flavie Enrico - API by ACNHAPI</p>
+    </footer>
 </body>
 </html>
