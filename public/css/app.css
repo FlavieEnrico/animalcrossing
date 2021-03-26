@@ -67,6 +67,17 @@ body >div:nth-of-type(2) {
     box-shadow: 0px 0px 10px lightgrey;
 }
 
+body >div:nth-of-type(2) > p {
+    text-align: center;
+    font-size: 14pt;
+    padding-left: 20%;
+    padding-right: 20%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    line-height: 16pt;
+    font-weight: 500;
+}
+
 body >div:nth-of-type(2) > h2 {
     font-size: 20pt;
     margin-top: 30px;
