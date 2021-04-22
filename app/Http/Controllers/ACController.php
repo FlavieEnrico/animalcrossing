@@ -186,7 +186,49 @@ if ($err) {
             'response'=>$response]);
         }
     }
-    public function crittersOfTheMonth() {
-      return view('ac');
+    public function randomCritter() {
+      $curl = curl_init();
+      $random =rand(1,3);
+      if ($random==1){
+        $chosenCritterType="fish";
+        $length=80;
+      }
+      else if ($random==2) {
+        $chosenCritterType="bugs";
+        $length=80;
+      }
+      else {
+        $chosenCritterType="sea";
+        $length=40;
+      }
+
+      $randomCritter=rand(1,$length);
+
+      curl_setopt_array($curl, [
+      CURLOPT_URL => "https://acnhapi.com/v1/$chosenCritterType/$randomCritter",
+      CURLOPT_RETURNTRANSFER => true,
+      CURLOPT_ENCODING => "",
+      CURLOPT_MAXREDIRS => 10,
+      CURLOPT_TIMEOUT => 30,
+      CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
+      CURLOPT_CUSTOMREQUEST => "GET",
+      CURLOPT_POSTFIELDS => "",
+      ]);
+
+      $response = curl_exec($curl);
+      $response=json_decode($response);
+      $err = curl_error($curl);
+
+      curl_close($curl);
+
+      if ($err) {
+      echo "cURL Error #:" . $err;
+      } else {
+      return view('ac', [
+      'response'=>$response,
+      'chosenCritterType'=>$chosenCritterType]
+      );
+      }
+      
     }
 }
